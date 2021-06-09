@@ -1,6 +1,6 @@
 <h2>Digital Innovation: Expert class - Desenvolvendo um sistema de gerenciamento de pessoas em API REST com Spring Boot</h2>
 
-*Aula gravada na plataforma da Digital Innovation One.*
+*Aula gravada na plataforma da [Digital Innovation One](https://digitalinnovation.one/).*
 
 *Autor da Aula: [Rodrigo Peleias](https://github.com/rpeleias)*
 
