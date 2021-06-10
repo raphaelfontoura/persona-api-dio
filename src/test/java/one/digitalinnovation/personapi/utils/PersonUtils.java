@@ -4,7 +4,9 @@ import one.digitalinnovation.personapi.dto.request.PersonDTO;
 import one.digitalinnovation.personapi.entity.Person;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 
 public class PersonUtils {
 
@@ -19,7 +21,7 @@ public class PersonUtils {
                 .firstName(FIRST_NAME)
                 .lastName(LAST_NAME)
                 .cpf(CPF_NUMBER)
-                .birthDate("04-04-2010")
+                .birthDate("01-10-2010")
                 .phones(Collections.singletonList(PhoneUtils.createFakeDTO()))
                 .build();
     }
@@ -33,5 +35,15 @@ public class PersonUtils {
                 .birthDate(BIRTH_DATE)
                 .phones(Collections.singletonList(PhoneUtils.createFakeEntity()))
                 .build();
+    }
+
+    public static List<PersonDTO> createFakeDTOList() {
+        var personDTO = createFakeDTO();
+        personDTO.setId(1L);
+        var phones = personDTO.getPhones();
+        phones.get(0).setId(1L);
+        return new ArrayList<>(){{
+            add(personDTO);
+        }};
     }
 }
